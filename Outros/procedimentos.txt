@@ -1,0 +1,32 @@
+Procedimentos página do produto específico
+Procedimentos:
+    addProduto
+    retiradaProduto
+    deletarProduto
+
+
+Alterar informacao:
+    alterarInformacao_nome
+    alterarInformacao_preco
+    alterarInformacao_img
+    alterarInformacao_desc
+    alterarInformacao_quantidade
+    alterarInformacao_situacao
+    deletarProduto
+
+
+Situações possiveis:
+    Indisponível
+    Disponível
+    Deletado
+
+
+Procedimentos página de privacidade:
+deletarConta
+alterarNome
+alterarSenha
+alterarImagem
+
+Situações de uma conta:
+Ativa
+Desativada

@@ -158,7 +158,7 @@ class Model
             $this->dataBaseName
         );
 
-        $SQL_comand = "INSERT INTO produtos VALUES(DEFAULT, '$img', '$nome', $preco, '$descricao', $quantidade, $idUsuario, '$imgType', NOW(), 'Disponível');";
+        $SQL_comand = "INSERT INTO produtos VALUES(DEFAULT, '$img', '$nome', $preco, '$descricao', $quantidade, $idUsuario, '$imgType', NOW(), 'Disponivel');";
 
         mysqli_query($conectionString, $SQL_comand);
     }
@@ -208,7 +208,7 @@ class Model
             $this->dataBaseName
         );
 
-        $SQL_comand = "SELECT * FROM produtos WHERE idUsuario = '$idUsuario'";
+        $SQL_comand = "SELECT id, img, nome, preco, descricao, quantidade, tipoImagem, dataAdicao, situacaoAtual FROM produtos WHERE idUsuario = '$idUsuario'";
 
         $result = mysqli_query($conectionString, $SQL_comand);
 
@@ -250,7 +250,7 @@ class Model
         return $values;
     }
 
-    protected function getLastModifDate($idProduto){
+    protected function getLastModifyDate($idProduto){
         $conectionString = mysqli_connect(
             $this->dataBaseHost,
             $this->dataBaseUser,
@@ -267,7 +267,7 @@ class Model
         while ($lines = mysqli_fetch_assoc($result)) {
             $values[] = $lines;
         }
-
+        
         return $values;
     }
 
@@ -367,6 +367,10 @@ class Model
         );
 
         $SQL_comand = "UPDATE produtos SET quantidade = '$newAmount' WHERE id = $idProduto;";
+
+        if($newAmount === 0){
+            $this->updateCurrentySituation($idProduto, "Indisponivel");
+        }
 
         mysqli_query($conectionString, $SQL_comand);
     }

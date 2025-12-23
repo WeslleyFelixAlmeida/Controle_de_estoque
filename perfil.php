@@ -55,7 +55,7 @@
                     $Perfil->showProductCards();
                 ?>
             </div>
-        </section>
+        </section>  
     </main>
     <footer>
         <div class="containerCopyRight">

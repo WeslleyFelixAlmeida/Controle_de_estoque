@@ -1,0 +1,15 @@
+cores:
+
+Cores relacionadas a logo
+#171E26
+#307347
+#54BF6F
+#ADD9B4
+#0D0D0D
+
+Cores monocromático
+#485059
+#6F7D8C
+#171E26 - principal
+#7195BF
+#5EA3F2

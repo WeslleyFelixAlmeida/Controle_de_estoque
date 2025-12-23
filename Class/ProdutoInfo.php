@@ -17,7 +17,7 @@ class ProductInfo extends Model
                 header('Location: perfil.php');
             }
 
-            $unformatedDate =  $this->getLastModifDate($this->productInfoData[0]['id']);
+            $unformatedDate =  $this->getLastModifyDate($this->productInfoData[0]['id']);
             
             $day = $unformatedDate[0]['ultimaModificacao'][8]
                   .$unformatedDate[0]['ultimaModificacao'][9];
